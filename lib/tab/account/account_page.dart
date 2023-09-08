@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 
+import 'account_model.dart';
+
 class AccountPage extends StatelessWidget {
   const AccountPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final model = AccountModel();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Instagram Clone'),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              model.logout();
+            },
             icon: const Icon(Icons.exit_to_app),
           ),
         ],
@@ -24,12 +29,12 @@ class AccountPage extends StatelessWidget {
               children: [
                 Stack(
                   children: [
-                    const SizedBox(
+                    SizedBox(
                       width: 80,
                       height: 80,
                       child: CircleAvatar(
-                        backgroundImage: NetworkImage(
-                            'https://i.namu.wiki/i/KHZxgx6dilwr4Z7uu6wSPoVlf5aIb6rq6qIOBV2LYBYdN9cWFaLlvkggojNNTD6mrwtGxS_lTPh4Woge2hzuZQ.webp'),
+                        backgroundImage:
+                            NetworkImage(model.getProfileImageUrl()),
                       ),
                     ),
                     Container(
@@ -63,9 +68,9 @@ class AccountPage extends StatelessWidget {
                 const SizedBox(
                   height: 8,
                 ),
-                const Text(
-                  '아이유',
-                  style: TextStyle(
+                Text(
+                  model.getNickName(),
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
