@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone_renew/tab/home/home_model.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final model = HomeModel();
@@ -33,20 +38,28 @@ class HomePage extends StatelessWidget {
                     SizedBox(
                       width: 80,
                       height: 80,
-                      child: CircleAvatar(
-                        backgroundImage:
-                            NetworkImage(model.getProfileImageUrl()),
+                      child: GestureDetector(
+                        onTap: () async {
+                          await model.updateProfileImage();
+                          setState(() {
+
+                          });
+                        },
+                        child: CircleAvatar(
+                          backgroundImage:
+                              NetworkImage(model.getProfileImageUrl()),
+                        ),
                       ),
                     ),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     Text(
                       model.getEmail(),
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontWeight: FontWeight.bold),
                     ),
                     Text(
                       model.getNickName(),
                     ),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     Row(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -57,14 +70,14 @@ class HomePage extends StatelessWidget {
                           height: 70,
                           fit: BoxFit.cover,
                         ),
-                        SizedBox(width: 4),
+                        const SizedBox(width: 4),
                         Image.network(
                           'https://i.namu.wiki/i/KHZxgx6dilwr4Z7uu6wSPoVlf5aIb6rq6qIOBV2LYBYdN9cWFaLlvkggojNNTD6mrwtGxS_lTPh4Woge2hzuZQ.webp',
                           width: 70,
                           height: 70,
                           fit: BoxFit.cover,
                         ),
-                        SizedBox(width: 4),
+                        const SizedBox(width: 4),
                         Image.network(
                           'https://i.namu.wiki/i/KHZxgx6dilwr4Z7uu6wSPoVlf5aIb6rq6qIOBV2LYBYdN9cWFaLlvkggojNNTD6mrwtGxS_lTPh4Woge2hzuZQ.webp',
                           width: 70,
@@ -73,11 +86,11 @@ class HomePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 8),
-                    Text('사진들3개'),
-                    SizedBox(height: 8),
-                    Text('Facebook 친구'),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
+                    const Text('사진들3개'),
+                    const SizedBox(height: 8),
+                    const Text('Facebook 친구'),
+                    const SizedBox(height: 8),
                     // ElevatedButton(
                     //     onPressed: () {},
                     //     child: Text('팔로우'))
