@@ -6,7 +6,7 @@ import 'package:instagram_clone_renew/tab/search/search_page.dart';
 import 'account/account_page.dart';
 
 class TabPage extends StatefulWidget {
-  const TabPage({super.key});
+  const TabPage({Key? key}) : super(key: key);
 
   @override
   State<TabPage> createState() => _TabPageState();

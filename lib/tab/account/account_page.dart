@@ -6,7 +6,7 @@ import '../../domain/post.dart';
 import 'account_model.dart';
 
 class AccountPage extends StatelessWidget {
-  const AccountPage({super.key});
+  const AccountPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -46,9 +46,9 @@ class AccountPage extends StatelessWidget {
                           width: 80,
                           height: 80,
                           alignment: Alignment.bottomRight,
-                          child: const Stack(
+                          child: Stack(
                             alignment: Alignment.center,
-                            children: [
+                            children: const [
                               SizedBox(
                                 width: 28,
                                 height: 28,
@@ -99,8 +99,8 @@ class AccountPage extends StatelessWidget {
                     const Text('게시물'),
                   ],
                 ),
-                const Column(
-                  children: [
+                Column(
+                  children: const [
                     Text(
                       '0',
                       style: TextStyle(fontSize: 18),
@@ -108,8 +108,8 @@ class AccountPage extends StatelessWidget {
                     Text('팔로워'),
                   ],
                 ),
-                const Column(
-                  children: [
+                Column(
+                  children: const [
                     Text(
                       '0',
                       style: TextStyle(fontSize: 18),

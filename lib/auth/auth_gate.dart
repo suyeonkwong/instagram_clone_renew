@@ -4,7 +4,7 @@ import 'package:flutterfire_ui/auth.dart';
 import 'package:instagram_clone_renew/tab/tab_page.dart';
 
 class AuthGate extends StatelessWidget {
-  const AuthGate({super.key});
+  const AuthGate({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -7,7 +7,7 @@ import 'package:instagram_clone_renew/tab/search/search_model.dart';
 import '../../domain/post.dart';
 
 class SearchPage extends StatelessWidget {
-  const SearchPage({super.key});
+  const SearchPage({Key? key}) : super(key: key);
 
   final List<String> _urls = const [
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9CyGWI-J5S0W0w29dJDF4amJ-Qj_fFzzUV-YjpVVQ2vOUsSMvaXju-xhR6OuNCM6he1A&usqp=CAU',

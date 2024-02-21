@@ -1,4 +1,5 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sy.instagram_clone_renew">
     <application
         android:label="instagram_clone_renew"
         android:name="${applicationName}"

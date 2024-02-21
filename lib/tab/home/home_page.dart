@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram_clone_renew/tab/home/home_model.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
 }
 
 class Test extends StatefulWidget {
-  const Test({super.key});
+  const Test({Key? key}) : super(key: key);
 
   @override
   State<Test> createState() => _TestState();

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram_clone_renew/create/create_model.dart';
 
 class CreatePage extends StatefulWidget {
-  const CreatePage({super.key});
+  const CreatePage({Key? key}) : super(key: key);
 
   @override
   State<CreatePage> createState() => _CreatePageState();

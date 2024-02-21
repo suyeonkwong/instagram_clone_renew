@@ -6,7 +6,7 @@ import 'detail._post_model.dart';
 class DetailPostPage extends StatelessWidget {
   final Post post;
 
-  const DetailPostPage({super.key, required this.post});
+  const DetailPostPage({Key? key, required this.post}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
